@@ -54,9 +54,9 @@ struct ContentView: View {
                 
                 HStack{
                     Stepper("\(m2)",value:$m2,in:0...12)
-                    Text("kinder Bites")
+                        .padding()
+                    Text("1.950")
                     Spacer()
-                    
                     Text("kider bites")
                         .font(.headline)
                         .fontWeight(.medium)
@@ -67,6 +67,7 @@ struct ContentView: View {
                 }
                 HStack{
                     Stepper("\(m3)",value:$m3,in:0...12)
+                        .padding()
                     Text("15.500")
                     Spacer()
                     
@@ -80,6 +81,7 @@ struct ContentView: View {
                 }
                 HStack{
                     Stepper("\(m4)",value:$m4,in:0...12)
+                        .padding()
                     Text("15.500")
                     Spacer()
                     
@@ -93,6 +95,7 @@ struct ContentView: View {
                 }
                 HStack{
                     Stepper("\(m5)",value:$m5,in:0...12)
+                        .padding()
                     Text("1.950")
                     Spacer()
                     

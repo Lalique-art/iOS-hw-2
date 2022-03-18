@@ -37,75 +37,93 @@ struct ContentView: View {
                 Text("menu")
                     .font(.title)
                     .fontWeight(.regular)
+                    .foregroundColor(Color(red: 0.927, green: 0.113, blue: 0.443))
+                    
                 HStack{
                     Stepper("\(m1)",value:$m1,in:0...12)
                         .padding()
-                    Text("1.950")
+                        .frame(width: 150)
                     Spacer()
+                    Text("1.950")
+                   
                     
                     Text("original donut")
                         .font(.headline)
                         .fontWeight(.medium)
                     Image("original")
                         .resizable()
-                        .frame(width: 80, height: 80)
+                        .frame(width: 60, height: 80)
                         .scaledToFit()
+                        .clipShape(Circle())
                 }
                 
                 HStack{
                     Stepper("\(m2)",value:$m2,in:0...12)
                         .padding()
-                    Text("1.950")
+                        .frame(width: 150)
                     Spacer()
+                    Text("1.950")
+            
                     Text("kider bites")
                         .font(.headline)
                         .fontWeight(.medium)
                     Image("kinder bites")
                         .resizable()
-                        .frame(width: 80, height: 80)
+                        .frame(width: 60, height: 80)
                         .scaledToFit()
+                        .clipShape(Circle())
                 }
                 HStack{
                     Stepper("\(m3)",value:$m3,in:0...12)
                         .padding()
-                    Text("15.500")
+                        .frame(width: 150)
                     Spacer()
+                    Text("15.500")
+                   
                     
                     Text("kinder bucket")
                         .font(.headline)
                         .fontWeight(.medium)
                     Image("kinder bucket")
                         .resizable()
-                        .frame(width: 80, height: 80)
+                        .frame(width: 60, height: 80)
                         .scaledToFit()
+                        .clipShape(Circle())
                 }
                 HStack{
                     Stepper("\(m4)",value:$m4,in:0...12)
                         .padding()
-                    Text("15.500")
+                        .frame(width: 150)
                     Spacer()
+                    Text("15.500")
+                
                     
                     Text("chocolate bucket")
                         .font(.headline)
                         .fontWeight(.medium)
                     Image("chocolate bucket")
                         .resizable()
-                        .frame(width: 80, height: 80)
+                         .frame(width: 60, height: 80)
                         .scaledToFit()
+                        .clipShape(Circle())
                 }
                 HStack{
                     Stepper("\(m5)",value:$m5,in:0...12)
                         .padding()
-                    Text("1.950")
+                        .frame(width: 150)
                     Spacer()
+                    Text("1.950")
+            
                     
                     Text("tough love")
                         .font(.headline)
                         .fontWeight(.medium)
                     Image("tough love")
                         .resizable()
-                        .frame(width: 80, height: 80)
+                         .frame(width: 60, height: 80)
                         .scaledToFit()
+                        .clipShape(Circle())
+                
                 }
                 Group{
                     HStack{

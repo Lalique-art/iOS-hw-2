@@ -22,6 +22,7 @@ struct ContentView: View {
     @State var amount = 0.0
     @State var money = ""
     @State var bill = ""
+    @State var mission = ""
     var body: some View{
         VStack{
             ScrollView{
@@ -52,7 +53,7 @@ struct ContentView: View {
                         .fontWeight(.medium)
                     Image("original")
                         .resizable()
-                        .frame(width: 60, height: 80)
+                        .frame(width: 60, height: 85)
                         .scaledToFit()
                         .clipShape(Circle())
                 }
@@ -86,7 +87,7 @@ struct ContentView: View {
                         .fontWeight(.medium)
                     Image("kinder bucket")
                         .resizable()
-                        .frame(width: 60, height: 80)
+                        .frame(width: 60, height: 85)
                         .scaledToFit()
                         .clipShape(Circle())
                 }
@@ -120,7 +121,7 @@ struct ContentView: View {
                         .fontWeight(.medium)
                     Image("tough love")
                         .resizable()
-                         .frame(width: 60, height: 80)
+                         .frame(width: 60, height: 60)
                         .scaledToFit()
                         .clipShape(Circle())
                 
@@ -133,7 +134,7 @@ struct ContentView: View {
                         Text("المبلغ لذي لديك")
                     }
                     Text("الفاتورة")
-                        .frame(width: 200, height: 60)
+                        .frame(width:150, height: 50)
                         .background(Color.pink)
                         .cornerRadius(8)
                         .onTapGesture {
@@ -149,9 +150,17 @@ struct ContentView: View {
                             else{
                                 bill = "نجحت العملية"
                             }
+                            if Double(money) ?? 0.0 < amount{
+                                mission = "ليس لديك المبلغ المطلوب"
+                            }
+                            else{
+                                mission = "لديك المبلغ المطلوب"
+                            }
                         }
                     Text("المبلغ الاجمالي:\(amount,specifier:"%.2f")")
                     Text(bill)
+                    Text(mission)
+                    Spacer()
                 }
                 
                 
